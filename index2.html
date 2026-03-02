@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinh Thi My Le | Software & Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .logo-font { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+        .section-title:after {
+            content: ''; position: absolute; width: 60px; height: 3px;
+            background: rgb(14 165 233); bottom: -8px; left: 0; border-radius: 9999px;
+        }
+        .project-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .project-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
+        .nav-link:after {
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -2px; left: 0;
+            background-color: rgb(14 165 233); transition: width 0.3s ease;
+        }
+        .nav-link:hover:after { width: 100%; }
+        .btn-view { transition: all 0.3s ease; }
+        .btn-view:hover { background-color: rgb(14 165 233); color: white; transform: translateX(4px); }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white border-b border-slate-200 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-sky-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold logo-font">T</div>
+                <span class="logo-font text-2xl font-semibold tracking-tighter">Trinh Thi My Le</span>
+            </a>
+            <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+                <a href="#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
+                <a href="#experience" class="nav-link text-slate-600 hover:text-slate-900">Experience</a>
+                <a href="#projects" class="nav-link text-slate-600 hover:text-slate-900">Projects</a>
+                <a href="#skills" class="nav-link text-slate-600 hover:text-slate-900">Skills</a>
+                <a href="#education" class="nav-link text-slate-600 hover:text-slate-900">Education</a>
+                <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900">Contact</a>
+            </div>
+            <a href="mailto:letrinh0904.work@gmail.com" class="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-white border border-slate-300 hover:border-sky-500 rounded-3xl text-sm font-medium transition-all">
+                <i class="fa-solid fa-envelope text-sky-600"></i> Get in touch
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-2 bg-white rounded-3xl px-5 py-2 text-sm font-medium shadow-sm mb-6">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    Open to Software Engineering & Full-Stack Opportunities
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter leading-none mb-4 logo-font">Trinh Thi<br>My Le</h1>
+                <p class="text-2xl md:text-3xl text-slate-600 mb-8">
+                    Final-year Computer Engineering student<br>
+                    <span class="text-sky-600 font-semibold">Full-Stack Developer</span>
+                </p>
+                <p class="max-w-md text-lg text-slate-600 mb-10">
+                    I enjoy building clean and useful web applications with React, Node.js, Laravel, and MySQL.
+                    I have real team experience and I am ready to learn and contribute in a professional setting.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-10 py-4 bg-sky-600 hover:bg-sky-700 text-white rounded-3xl font-semibold flex items-center gap-3 transition-all">
+                        View Projects <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="CV_FullStack_Intern_TrinhThiMyLe.pdf" target="_blank" class="px-8 py-4 border-2 border-slate-800 hover:bg-slate-900 hover:text-white rounded-3xl font-semibold flex items-center gap-3 transition-all">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="md:col-span-5 flex justify-center">
+                <div class="w-80 h-80 bg-gradient-to-br from-sky-500 to-blue-600 rounded-[4rem] p-2 shadow-2xl">
+                    <div class="w-full h-full bg-white rounded-[3rem] overflow-hidden">
+                        <!-- Replace with your real photo link -->
+                        <img src="TrinhThiMyLe.jpg" alt="Trinh Thi My Le" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-5">
+                    <span class="px-4 py-2 bg-sky-100 text-sky-700 rounded-3xl text-sm font-medium">WHO AM I</span>
+                    <h2 class="section-title text-5xl font-bold mt-4 mb-6">Passionate builder</h2>
+                </div>
+                <div class="md:col-span-7 text-lg leading-relaxed text-slate-600">
+                    <p class="mb-6">
+                        I am a final-year Computer Engineering student at HCMUT with good skills in full-stack development.
+                        I have built several web applications and worked on real projects used by many people.
+                    </p>
+                    <p>
+                        I like working in a team, using Git, and writing clean code.
+                        I want to join a company to learn more and help build great products.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="section-title text-5xl font-bold mb-12">Work Experience</h2>
+            <div class="space-y-12">
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <div class="flex flex-wrap justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="font-semibold text-xl">Full-Stack Web Developer Intern</h3>
+                            <p class="text-sky-600">ZIGExN VeNtura – Minden Platform</p>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium">Nov 2025 – Jan 2026</p>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>• Built backend features using Laravel (PHP) and MySQL for live user features</li>
+                        <li>• Improved RESTful APIs to make the site faster and reduce extra requests</li>
+                        <li>• Added A/B testing banners and promotion rules</li>
+                        <li>• Worked with team using Git and followed coding rules</li>
+                    </ul>
+                    <a href="https://sp.minden.jp/" target="_blank" class="mt-6 inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-medium">
+                        View Live Product <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow">
+                    <div class="flex flex-wrap justify-between gap-4 mb-4">
+                        <div>
+                            <h3 class="font-semibold text-xl">Business Analyst Intern</h3>
+                            <p class="text-sky-600">Tam Anh Hospital</p>
+                        </div>
+                        <p class="text-slate-500 text-sm font-medium">Jun 2025 – Jul 2025</p>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li>• Tested software and wrote test reports for internal systems</li>
+                        <li>• Created user manuals and system documents</li>
+                        <li>• Wrote Software Requirement Specifications (SRS)</li>
+                        <li>• Worked with QA and developers to improve system quality</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS - Phiên bản ngắn gọn hơn -->
+<section id="projects" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="section-title text-5xl font-bold mb-12">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Project 1 -->
+            <div class="project-card bg-white border border-slate-200 rounded-3xl overflow-hidden">
+                <div class="h-56 bg-gradient-to-br from-sky-100 to-blue-100 flex items-center justify-center text-7xl text-sky-300">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div class="p-8">
+                    <span class="text-xs font-medium text-slate-500 uppercase">Sep 2025</span>
+                    <h3 class="text-2xl font-semibold mt-2">Student Time Management Solution</h3>
+                    <p class="text-slate-600 mt-3 mb-4">
+                        Full-stack app for managing study tasks & schedules (CRUD, List/Calendar/Analytics views).
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs">
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">React.js</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">Node.js</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">MongoDB</span>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-base mb-2">Responsibilities:</h4>
+                        <ul class="space-y-1.5 text-slate-600 text-sm list-disc pl-5">
+                            <li>Built full CRUD APIs with Node.js & Express</li>
+                            <li>Created responsive multi-view frontend (React + Vite)</li>
+                            <li>Ensured clean, maintainable code structure</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/MileeDevWork/TodoApp" target="_blank" class="btn-view inline-flex items-center gap-2 px-5 py-2.5 border border-sky-600 text-sky-600 rounded-3xl font-medium hover:bg-sky-600 hover:text-white transition-all">
+                        View Project <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card bg-white border border-slate-200 rounded-3xl overflow-hidden">
+                <div class="h-56 bg-gradient-to-br from-emerald-100 to-cyan-100 flex items-center justify-center text-7xl text-emerald-300">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="p-8">
+                    <span class="text-xs font-medium text-slate-500 uppercase">Feb – Apr 2025</span>
+                    <h3 class="text-2xl font-semibold mt-2">Study Room Booking Website</h3>
+                    <p class="text-slate-600 mt-3 mb-4">
+                        University room booking system with schedule management & history view.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs">
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">React.js</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">FastAPI</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">MySQL</span>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-base mb-2">Responsibilities:</h4>
+                        <ul class="space-y-1.5 text-slate-600 text-sm list-disc pl-5">
+                            <li>Integrated frontend-backend via Axios</li>
+                            <li>Optimized API logic for data consistency</li>
+                            <li>Built responsive UI with Tailwind CSS</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/HK242-BTL-CNPM/Booking_StudyRoom_Web" target="_blank" class="btn-view inline-flex items-center gap-2 px-5 py-2.5 border border-sky-600 text-sky-600 rounded-3xl font-medium hover:bg-sky-600 hover:text-white transition-all">
+                        View Project <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card bg-white border border-slate-200 rounded-3xl overflow-hidden">
+                <div class="h-56 bg-gradient-to-br from-purple-100 to-violet-100 flex items-center justify-center text-7xl text-violet-300">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <div class="p-8">
+                    <span class="text-xs font-medium text-slate-500 uppercase">Feb – Apr 2025</span>
+                    <h3 class="text-2xl font-semibold mt-2">Real-time Chat Application</h3>
+                    <p class="text-slate-600 mt-3 mb-4">
+                        Chat platform with 1-1/group messaging, file sharing & live comments.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs">
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">React.js</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">Socket.IO</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">MongoDB</span>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-base mb-2">Responsibilities:</h4>
+                        <ul class="space-y-1.5 text-slate-600 text-sm list-disc pl-5">
+                            <li>Implemented real-time features using Socket.IO</li>
+                            <li>Designed MongoDB models & file sharing</li>
+                            <li>Built backend with Node.js & Express</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/MileeDevWork/ChatApp" target="_blank" class="btn-view inline-flex items-center gap-2 px-5 py-2.5 border border-sky-600 text-sky-600 rounded-3xl font-medium hover:bg-sky-600 hover:text-white transition-all">
+                        View Project <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card bg-white border border-slate-200 rounded-3xl overflow-hidden">
+                <div class="h-56 bg-gradient-to-br from-orange-100 to-amber-100 flex items-center justify-center text-7xl text-orange-300">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                </div>
+                <div class="p-8">
+                    <span class="text-xs font-medium text-slate-500 uppercase">Nov – Dec 2024</span>
+                    <h3 class="text-2xl font-semibold mt-2">Footwear E-Commerce Website</h3>
+                    <p class="text-slate-600 mt-3 mb-4">
+                        Responsive sneaker store with product listing, cart & checkout.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4 text-xs">
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">HTML + Tailwind</span>
+                        <span class="px-3 py-1.5 bg-slate-100 rounded-3xl">PHP</span>
+                    </div>
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-base mb-2">Responsibilities:</h4>
+                        <ul class="space-y-1.5 text-slate-600 text-sm list-disc pl-5">
+                            <li>Designed UI in Figma & built frontend with Tailwind</li>
+                            <li>Developed product pages (listing, detail, cart, checkout)</li>
+                            <li>Integrated basic PHP backend logic</li>
+                        </ul>
+                    </div>
+                    <a href="https://github.com/MileeDevWork/WebDev_241/tree/finalfinal" target="_blank" class="btn-view inline-flex items-center gap-2 px-5 py-2.5 border border-sky-600 text-sky-600 rounded-3xl font-medium hover:bg-sky-600 hover:text-white transition-all">
+                        View Project <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="section-title text-white text-5xl font-bold mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-slate-800 rounded-3xl p-8">
+                    <div class="uppercase text-sky-400 text-sm mb-6">Frontend</div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">React.js</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">JavaScript</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">Tailwind CSS</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">HTML & CSS</span>
+                    </div>
+                </div>
+                <div class="bg-slate-800 rounded-3xl p-8">
+                    <div class="uppercase text-sky-400 text-sm mb-6">Backend</div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">Node.js & Express</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">PHP (Laravel)</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">FastAPI (Python)</span>
+                    </div>
+                </div>
+                <div class="bg-slate-800 rounded-3xl p-8">
+                    <div class="uppercase text-sky-400 text-sm mb-6">Database & Tools</div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">MySQL</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">MongoDB</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">Git & GitHub</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">Postman</span>
+                        <span class="px-5 py-2.5 bg-slate-700 rounded-3xl text-sm">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-16">
+            <div class="md:col-span-5">
+                <h2 class="section-title text-5xl font-bold">Education</h2>
+                <div class="mt-8">
+                    <div class="text-sky-600 font-medium">Ho Chi Minh City University of Technology – VNU HCM</div>
+                    <div class="text-3xl font-semibold mt-1">Computer Engineering</div>
+                    <div class="text-slate-500 mt-1">Sep 2022 – Present</div>
+                </div>
+            </div>
+            <div class="md:col-span-7">
+                <div class="bg-slate-50 rounded-3xl p-10">
+                    <div class="uppercase text-xs tracking-widest text-slate-500 mb-4">Certification</div>
+                    <div class="flex items-center gap-6">
+                        <div class="text-8xl font-bold text-slate-200">TOEIC</div>
+                        <div>
+                            <div class="text-4xl font-semibold">605</div>
+                            <div class="text-slate-600">Listening & Reading – April 2025</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 bg-sky-600 text-white">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6">Let's work together</h2>
+            <p class="text-xl text-sky-100 mb-12">
+                I am looking for internship or positions in Software Engineering, Full-Stack Development, Web Development or related fields.<br>
+                Feel free to contact me!
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="mailto:letrinh0904.work@gmail.com" class="px-10 py-6 bg-white text-slate-900 rounded-3xl font-semibold text-lg flex items-center justify-center gap-4 hover:scale-105 transition-all">
+                    <i class="fa-solid fa-envelope"></i> Send me an email
+                </a>
+                <a href="tel:+84326721396" class="px-10 py-6 border-2 border-white rounded-3xl font-semibold text-lg flex items-center justify-center gap-4 hover:bg-white hover:text-sky-600 transition-all">
+                    <i class="fa-solid fa-phone"></i> 0326 721 396
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 text-center text-sm">
+    </footer>
+
+</body>
+</html>
